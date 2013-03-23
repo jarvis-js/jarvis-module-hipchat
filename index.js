@@ -77,7 +77,7 @@ HipChatAdaptor.prototype.onMessage = function onMessage(channel, from, message) 
 		var direct = false;
 		if (message.indexOf('@' + this.mentionName + ' ') === 0) {
 			direct = true;
-			message = message.substring(8);
+			message = message.substring(this.mentionName.length + 2);
 		}
 
 		chan.received(new chan.Message({
