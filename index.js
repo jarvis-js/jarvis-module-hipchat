@@ -14,15 +14,6 @@ module.exports = function(jarvis, module) {
 			adaptors[i].disconnect();
 		}
 	};
-
-	module.addAction(module.createCommand({
-		name: 'time',
-		match: 'what is the time?',
-		func: function(message) {
-			var now = new Date();
-			jarvis.reply(message, now.toLocaleString());
-		}
-	}));
 };
 
 function HipChatAdaptor(jarvis, config) {
