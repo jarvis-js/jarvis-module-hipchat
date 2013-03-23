@@ -1,0 +1,23 @@
+{
+  "name": "jarvis-module-hipchat",
+  "version": "0.1.0",
+  "description": "HipChat module for Jarvis",
+  "main": "index.js",
+  "dependencies": {
+    "wobot": "~0.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexwhitman/jarvis-module-hipchat.git"
+  },
+  "keywords": [
+    "Jarvis",
+    "HipChat"
+  ],
+  "author": "Alex Whitman <alex@alexwhitman.com>",
+  "license": "BSD"
+}
