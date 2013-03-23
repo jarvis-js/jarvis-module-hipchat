@@ -26,6 +26,8 @@ function HipChatAdaptor(jarvis, config) {
 		password: config.password
 	});
 
+	this.mentionName = config.mention;
+
 	this.rooms = config.rooms;
 
 	this.users = [];
@@ -73,7 +75,7 @@ HipChatAdaptor.prototype.onMessage = function onMessage(channel, from, message) 
 
 	if (user) {
 		var direct = false;
-		if (message.indexOf('@Jarvis ') === 0) {
+		if (message.indexOf('@' + this.mentionName + ' ') === 0) {
 			direct = true;
 			message = message.substring(8);
 		}
