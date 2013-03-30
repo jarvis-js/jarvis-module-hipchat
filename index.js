@@ -75,7 +75,8 @@ HipChatAdaptor.prototype.onMessage = function onMessage(channel, from, message) 
 
 	if (user) {
 		var direct = false;
-		if (message.indexOf('@' + this.mentionName + ' ') === 0) {
+		var lowMessage = message.toLowerCase();
+		if (lowMessage.indexOf('@' + this.mentionName.toLowerCase() + ' ') === 0) {
 			direct = true;
 			message = message.substring(this.mentionName.length + 2);
 		}
